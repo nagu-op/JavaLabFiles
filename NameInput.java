@@ -1,3 +1,13 @@
+/*File          : NameInput.java
+ *Description   : To input and print the name of the user
+ *Author        : Nagaraj Menon K S 
+ * Version      : 1.0
+ * Date			: 26/09/2023
+ * */
+
+
+
+
 package firstJavaLab;
 import java.util.Scanner;
 public class NameInput {
