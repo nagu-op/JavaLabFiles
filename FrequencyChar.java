@@ -1,3 +1,11 @@
+/*File          : FrequencyChar.java
+ *Description   : To find the frequency of a charactor in a string and return the count of the character. 
+ *Author        : Nagaraj Menon K S 
+ * Version      : 1.0
+ * Date			: 03/10/2023
+ * */
+
+
 package firstJavaLab;
 import java.util.Scanner;
 public class FrequencyChar {
