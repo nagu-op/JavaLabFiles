@@ -1,11 +1,32 @@
 package firstJavaLab;
-
+import java.util.Scanner;
 public class MethodOverloading {
  public static void main(String[] args) {
+	 Scanner sc = new Scanner(System.in);
+	 System.out.println("Enter the choice: \n 1. Rectange \n 2. Circle \n 3. Triangle");
+	 int choice;
+	 choice = sc.nextInt();
 	 Shape shape=new Shape();
-		Shape.area(12.5f,13.5f);
-		Shape.area(15,30);
-		Shape.area(17.5f);
+	 	if (choice == 1) {
+	 		System.out.println("Enter the length");
+	 		int a = sc.nextInt();
+	 		System.out.println("Enter the braedth");
+	 		int b = sc.nextInt();
+	 		Shape.area(a,b);
+	 }
+	 	else if(choice == 2) {
+	 		System.out.println("Enter the radius");
+	 		float a = sc.nextFloat();
+	 		Shape.area(a);
+	 	}
+	 	else if(choice == 3) {
+	 		System.out.println("Enter the height");
+	 		float a = sc.nextFloat();
+	 		System.out.println("Enter the breadth");
+	 		float b = sc.nextFloat();
+	 		Shape.area(a,b);
+	 	}
+		
 		
 	}
 
