@@ -21,6 +21,7 @@ public class Employee1{
 		System.out.print("The officer details are: \n"
 				+ "Name is " + officer.name+"\n"
 				+ "Age is " + officer.age+"\n"
+				+ "Address is" + officer.address+"\n"
 				+ "Phone Number is " + officer.phNumber+"\n"
 				+ "Specialization is " + officer.specialization+"\n");
 		officer.printSalary();
