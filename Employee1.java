@@ -39,11 +39,11 @@ public class Employee1{
 		String Department= sc.next();
 		Manager manager = new Manager(managerName,mAge,mPhNumber,mAddress,mSalary,Department);
 
-		System.out.print("The officer details are: \n"
+		System.out.print("The Manager details are: \n"
 				+ "Name is " + manager.name+"\n"
 				+ "Age is " + manager.age+"\n"
 				+ "Phone Number is " + manager.phNumber+"\n"
-				+ "Specialization is " + manager.department+"\n");
+				+ "Department is " + manager.department+"\n");
 		manager.printSalary();
 		}
 	
