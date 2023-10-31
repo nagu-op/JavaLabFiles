@@ -19,6 +19,16 @@ public class SmallestElement {
 		
 		int [] arr2 = new int [limit];
 		int count = 0;
+
+		/* in the below the following logic takes place:
+	for eg lets take a array arr = [1,1,7,3]
+ 	the main quetion arises when we ask will the 1 get appended to the arr 2 because when we check arr[i] == arr[j] the Repeat getts addded hence skipping the element 1
+  	But no, it won't do that
+	instaed it will first check arr[i] (ie 1) and will check it with arr[j](ie, arr[i+1] = 1 it self) it will skip the numberr by incrimenting 1 to Repeat,
+ 	now i takes the position 1 that is arr[1] (ie one itself) and check it with arr[j] (ie, arr[2] = 7 ). Hence arr[1] != arr[2] && arr[1] != arr[3],
+	therefore arr[1](ie, 1) will get appended to arr2 resulting arr 2 = [1,7,3]
+ 	then it will get bubble sorted and arr[1] is outputted as the second smalleset number...
+  */
 		for (int i = 0; i<limit; i++) {
 			int Repeat = 0;
 			for(int j = i + 1;j<limit; j++) {
