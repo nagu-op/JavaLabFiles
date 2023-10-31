@@ -53,8 +53,6 @@ public class SmallestElement {
 			}
 		}
 		System.out.println("The seconed smallest number is "+ arr2[1]);
-//		System.out.println("The smallest element is ");
-//		System.out.print(" "+arr[0]+" ");
 	
 	}
 
