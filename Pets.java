@@ -7,16 +7,16 @@ abstract class Animal{
 	}
 	public abstract void eat();
 	public void walk() {
-		System.out.println("This animal walks on "+legs+"legs");
+		System.out.println("This animal walks on "+legs+" legs");
 	}
 }
-class Spyder extends Animal{
-	public Spyder(){
+class Spider extends Animal{
+	public Spider(){
 		super(8);
 	}
 	@Override
 	public void eat() {
-		System.out.println("The Spider is eating");
+		System.out.println("Spider eat insects ");
 	}
 }
 
@@ -38,19 +38,69 @@ class Cat extends Animal implements Pet{
 	}
 	@Override
 	public void eat() {
-		System.out.println("The Cat is eating");
+		System.out.println("Cat eat fishes");
 	}
 	public String getName() {
-		System.out.println("Enter the name");
-		return name;
+
+		return this.name;
 	}
 	public void setName(String name) {
 		this.name = name;
 	}
 	public void play() {
-		System.out.println("hellow");
+		System.out.println("The cat is Playing");
+	}
+}
+class Fish extends Animal implements Pet{
+	private String name;
+	protected Fish(String name) {
+		
+		super(0);
+	}
+	Fish(){
+		this("");
+	}
+	String food;
+	@Override
+	public void eat() {
+		System.out.println(" Fish  eat plants");
+	}
+	public String getName() {
+
+		return this.name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void play() {
+		System.out.println("The Fish is Playing");
+	}
+	@Override
+	public void walk() {
+		System.out.println("Fish can't walk");
 	}
 }
 public class trial {
-
+	public static void main(String [] args) {
+        Fish d = new Fish();
+        Cat c = new Cat("Fluffy");
+        Animal a = new Fish();
+        Animal e = new Spider();
+        Pet p = new Cat();
+        d.setName("Mimi");
+        System.out.println("This fish's name is "+d.getName());
+        d.eat();
+        d.walk();
+        d.setName("Momo");
+        System.out.println("This fish's name is "+d.getName());
+        System.out.println("\n");
+        System.out.println("This cats's name is "+c.getName());
+        c.walk();
+        c.eat();
+        c.setName("Moose");
+        System.out.println("This cat's name is "+c.getName());
+        System.out.println("\n");
+        e.eat();
+        e.walk();
+	}
 }
