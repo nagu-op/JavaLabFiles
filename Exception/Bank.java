@@ -1,5 +1,14 @@
 package BankingApp;
 import java.util.Scanner;
+
+class InvalidAmountException  extends Exception  
+{  
+    public InvalidAmountException (String str)  
+    {  
+        
+        super(str);  
+    }  
+}  
 class Customer{
 	int accountNumber;
 	String accountType;
@@ -73,14 +82,23 @@ public class step1 {
 			}
 			
 			else if (choice == 3) {
+				try {
 				System.out.println("Enter the Accont number to be searched");
 				searchAccount = sc.nextInt();
 				System.out.println("Enter the amount to depost ");
 				int depositAmount = sc.nextInt();
+				if (depositAmount < 0) {
+					throw new InvalidAmountException("amount less than 0");
+				}
 				for(int i = 0; i<numberOfCustomer;i++) {
 					if (customer[i].accountNumber == searchAccount) {
 						customer[i].accountBalance = customer[i].accountBalance + depositAmount;
 					}
+				}
+			}
+				catch(InvalidAmountException e) {
+					System.out.println("The amount is less than 0");
+					
 				}
 				
 				
