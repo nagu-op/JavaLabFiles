@@ -18,10 +18,12 @@ class Customer{
 	}
 	
 	public void getCustomerDetails() {
+		System.out.println("..............................................");
 		System.out.println("The accout number is "+accountNumber);
 		System.out.println("The accout Type is "+accountType);
 		System.out.println("The Customer name is "+customerName);
 		System.out.println("The accout balance is $"+accountBalance);
+		System.out.println("..............................................");
 	}
 }
 
@@ -39,9 +41,51 @@ public class step1 {
 			customer[i] = new Customer(); // used for creating objects for each user...
 			customer[i].setCustomerDetails();
 		}
-		for (int i = 0; i<numberOfCustomer;i++){
 		
-			customer[i].getCustomerDetails();;
+		
+		int choice = 0;
+		int searchAccount;
+		while (choice != 5) {
+			System.out.println("\n 					Menu  					\n");
+			System.out.println("1.Display Account DEtails");
+			System.out.println("2.Search the account ");
+			System.out.println("3. Deposit");
+			System.out.println("5. Exit ");
+			System.out.println("Enter the choice");
+			choice = sc.nextInt();
+
+			
+			if (choice == 1) {
+				for (int i = 0; i<numberOfCustomer;i++){
+					
+					customer[i].getCustomerDetails();;
+				}
+			}
+			
+			else if(choice == 2) {
+				System.out.println("Enter the Accont number ");
+				searchAccount = sc.nextInt();
+				for(int i = 0; i<numberOfCustomer;i++) {
+					if (customer[i].accountNumber == searchAccount) {
+						customer[i].getCustomerDetails();
+					}
+				}
+			}
+			
+			else if (choice == 3) {
+				System.out.println("Enter the Accont number to be searched");
+				searchAccount = sc.nextInt();
+				System.out.println("Enter the amount to depost ");
+				int depositAmount = sc.nextInt();
+				for(int i = 0; i<numberOfCustomer;i++) {
+					if (customer[i].accountNumber == searchAccount) {
+						customer[i].accountBalance = customer[i].accountBalance + depositAmount;
+					}
+				}
+				
+				
+			}
 		}
+	
 	}
 }
